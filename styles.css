@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Base gradient */
+    color: #ff00ff; /* Magenta text color */
+    font-family: 'Fira Code', monospace; /* Professional and modern coding font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    z-index: 1;
+}
+
+.terminal {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Softer shadow */
+    font-size: 1.2em;
+    z-index: 2;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for better definition */
+}
+
+#output {
+    margin-bottom: 10px;
+    overflow-y: auto;
+    max-height: 400px; /* Limit the height of the output */
+    font-family: 'Fira Code', monospace; /* Matching modern font */
+    color: #00ff00; /* Green text for output */
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 5px;
+    color: #ff00ff; /* Magenta prompt */
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff00ff; /* Glowing effect */
+    animation: blink 1s step-end infinite; /* Blinking effect for cursor */
+}
+
+#input {
+    background: none;
+    border: none;
+    color: #ff00ff;
+    outline: none;
+    flex: 1;
+    font-family: 'Fira Code', monospace; /* Modern coding font */
+    text-shadow: 0 0 8px #ff00ff; /* Glowing effect */
+    caret-color: transparent; /* Hide caret */
+}
+
+#input-line span, #input-line input {
+    font-size: 1.2em;
+}
+
+/* Blinking effect for prompt cursor */
+@keyframes blink {
+    from, to {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #ff00ff;
+    }
+}
+
+footer {
+    color: #ccc;
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Style the placeholder text for a more modern look */
+#input::placeholder {
+    color: rgba(255, 0, 255, 0.5); /* Transparent magenta for placeholder */
+    font-style: italic;
+}
